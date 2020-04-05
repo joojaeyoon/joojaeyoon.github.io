@@ -97,7 +97,7 @@ author:
   bio: "Backend Developer"
   location: "South Korea"
   links:
-    - label: "Email"
+    - label: "jaeyoon@jooz.dev"
       icon: "fas fa-fw fa-envelope-square"
       url: mailto:jaeyoon@jooz.dev
     - label: "GitHub"
