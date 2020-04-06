@@ -60,3 +60,8 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
         <li>Docker Compose를 사용한 멀티 컨테이너 사용 방법</li>
     </ul>
 </p>
+
+<a href="https://github.com/joojaeyoon/djangochat" itemprop="sameAs" rel="nofollow noopener noreferrer">
+  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+  <span class="label">GitHub</span>
+</a>

@@ -6,6 +6,7 @@ classes: wide
 
 header:
   overlay_image: /assets/images/portfolio/resume-overlay.jpg
+  caption: "Photo by Bram Naus on [**Unsplash**](https://unsplash.com/)"
   overlay_filter: 0.3
 
 images:
@@ -22,13 +23,16 @@ images:
 
 #### 백엔드 개발자
 
+안녕하세요 서버 개발에 흥미를 느껴 백엔드 개발을 공부하고 있는 주재윤입니다.
+
 #### 📚 Stack
 
 다룰 수 있는 기술/언어들 입니다.
 
 - Python
-- Django
+- Django / Django Rest Framework
 - Docker
+- MySQL
 - git
 
 #### 💻 Projects

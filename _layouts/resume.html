@@ -17,7 +17,7 @@
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
     {% include_cached browser-upgrade.html %}
-    {% include_cached masthead.html %}
+    <!-- {% include_cached masthead.html %} -->
 
     <div class="initial-content">
       {% if page.header.overlay_color or page.header.overlay_image or
@@ -35,10 +35,13 @@
     <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
       style="min-height: 350px;{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
     >
+    {% if page.header.caption %}
+    <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+  {% endif %}
     </div>
       {% endif %}        
       <div id="main" role="main">
-        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+        <article class="page resume-body" itemscope itemtype="https://schema.org/CreativeWork">
           <div class="page__inner-wrap">
             <section class="page__content resume" itemprop="text">
               {{ content }}

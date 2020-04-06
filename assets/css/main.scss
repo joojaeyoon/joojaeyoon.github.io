@@ -12,6 +12,12 @@
   // font-size: 18px;
 }
 
+.resume-body {
+  width: calc(100% - 200px);
+  float: left;
+  margin-left: 100px;
+}
+
 .resume-profile {
   width: 150px;
   border-radius: 50px;
