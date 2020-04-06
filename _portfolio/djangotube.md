@@ -5,11 +5,14 @@ excerpt: "Django를 사용한 영상 스트리밍 서비스"
 classes: wide
 header:
   overlay_image: /assets/images/splash/laptop.jpg
+  overlay_filter: 0.5
   caption: "Photo by Clément H on [**Unsplash**](https://unsplash.com)"
   teaser: /assets/images/portfolio/tube/main.jpg
   actions:
     - label: "Open"
       url: "http://54.86.62.77/"
+
+github: "https://github.com/joojaeyoon/DjangoTube"
 
 sidebar:
   - image: /assets/images/portfolio/tube/main.jpg
@@ -64,8 +67,3 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
 - DRF APIView에서 GET, POST, PUT, PATCH, DELETE 전의 데이터 전처리 방법
 - Nginx 와 Django를 연동해서 배포하는 방법
 - Travis를 통한 테스트 자동화
-
-<a href="https://github.com/joojaeyoon/DjangoTube" itemprop="sameAs" rel="nofollow noopener noreferrer">
-  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-  <span class="label">GitHub</span>
-</a>

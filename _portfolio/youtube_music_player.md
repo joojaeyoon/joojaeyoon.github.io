@@ -11,6 +11,8 @@ header:
     - label: "Download"
       url: "https://github.com/joojaeyoon/YouTube-Music-Player/releases"
 
+github: "https://github.com/joojaeyoon/YouTube-Music-Player"
+
 sidebar:
   - image: /assets/images/portfolio/YTM.png
     image_alt: "ytm"
@@ -51,8 +53,3 @@ gallery:
         <li>Electron을 사용한 PC용 응용 프로그램 개발</li>
     </ul>
 </p>
-
-<a href="https://github.com/joojaeyoon/YouTube-Music-Player" itemprop="sameAs" rel="nofollow noopener noreferrer">
-  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-  <span class="label">GitHub</span>
-</a>

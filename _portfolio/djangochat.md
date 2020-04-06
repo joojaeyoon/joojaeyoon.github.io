@@ -5,11 +5,14 @@ excerpt: "Django Channels를 사용한 실시간 채팅 사이트"
 classes: wide
 header:
   overlay_image: /assets/images/splash/chat.jpg
+  overlay_filter: 0.5
   caption: "Photo by Daniel Korpai on [**Unsplash**](https://unsplash.com)"
   teaser: /assets/images/portfolio/chat.jpg
   actions:
     - label: "Open"
       url: "http://34.230.193.35/"
+
+github: "https://github.com/joojaeyoon/djangochat"
 
 sidebar:
   - image: /assets/images/portfolio/chat/chat.jpg
@@ -60,8 +63,3 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
         <li>Docker Compose를 사용한 멀티 컨테이너 사용 방법</li>
     </ul>
 </p>
-
-<a href="https://github.com/joojaeyoon/djangochat" itemprop="sameAs" rel="nofollow noopener noreferrer">
-  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
-  <span class="label">GitHub</span>
-</a>

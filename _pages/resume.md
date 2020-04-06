@@ -41,7 +41,7 @@ images:
 
 <div class="resume-projects">
   {% for post in site.portfolio limit:4 %}
-    {% include portfolio-single.html type="grid" %}
+    {% include portfolio-archive.html type="grid" %}
   {% endfor %}
 </div>
 
