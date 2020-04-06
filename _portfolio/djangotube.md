@@ -1,5 +1,5 @@
 ---
-title: "YouTube Music Player"
+title: "DjangoTube"
 excerpt: "Electron을 사용하여 만든 데스크탑용 응용프로그램"
 
 classes: wide

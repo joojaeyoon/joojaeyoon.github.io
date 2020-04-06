@@ -7,3 +7,16 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.resume {
+  // font-size: 18px;
+}
+
+.resume-profile {
+  width: 150px;
+  border-radius: 50px;
+}
+
+.resume-projects {
+  float: inherit;
+}

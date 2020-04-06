@@ -1,0 +1,67 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+    {% include_cached skip-links.html %}
+    {% include_cached browser-upgrade.html %}
+    {% include_cached masthead.html %}
+
+    <div class="initial-content">
+      {% if page.header.overlay_color or page.header.overlay_image or
+        page.header.image %} 
+        {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
+
+        {% if page.header.overlay_filter contains "rgba" %}
+          {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
+        {% elsif page.header.overlay_filter %}
+          {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
+        {% endif %}
+
+        {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
+
+    <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
+      style="min-height: 350px;{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}), {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+    >
+    </div>
+      {% endif %}        
+      <div id="main" role="main">
+        <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+          <div class="page__inner-wrap">
+            <section class="page__content resume" itemprop="text">
+              {{ content }}
+            </section>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    {% if site.search == true %}
+      <div class="search-content">
+        {% include_cached search/search_form.html %}
+      </div>
+    {% endif %}
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
