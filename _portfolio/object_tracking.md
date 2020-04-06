@@ -53,3 +53,8 @@ gallery:
 ## 프로젝트를 통해 배운 것들
 
 - python 딥 러닝 라이브러리 pytorch를 사용해서 데이터를 학습시키고 인식하는 방법
+
+<a href="https://github.com/joojaeyoon/YOLO_Tracker" itemprop="sameAs" rel="nofollow noopener noreferrer">
+  <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+  <span class="label">GitHub</span>
+</a>
