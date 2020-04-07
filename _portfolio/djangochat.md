@@ -34,6 +34,16 @@ gallery:
     image_path: /assets/images/portfolio/chat/login.png
   - url: /assets/images/portfolio/chat/register.png
     image_path: /assets/images/portfolio/chat/login.png
+
+tech:
+  - name: Python
+    class: "devicon-python-plain-wordmark colored"
+  - name: Django
+    class: "devicon-django-plain-wordmark colored"
+  - name: React
+    class: "devicon-react-original-wordmark colored"
+  - name: Docker
+    class: "devicon-docker-plain-wordmark colored"
 ---
 
 # DjangoChat
@@ -63,3 +73,7 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
         <li>Docker Compose를 사용한 멀티 컨테이너 사용 방법</li>
     </ul>
 </p>
+
+## 사용 기술
+
+{% include tech.html %}

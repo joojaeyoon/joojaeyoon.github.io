@@ -31,6 +31,20 @@ gallery:
   - url: /assets/images/portfolio/tube/video.jpg
     image_path: /assets/images/portfolio/tube/video.jpg
     alt: "Video detail"
+
+tech:
+  - name: Python
+    class: "devicon-python-plain-wordmark colored"
+  - name: Django
+    class: "devicon-django-plain-wordmark colored"
+  - name: Jquery
+    class: "devicon-jquery-plain-wordmark colored"
+  - name: nginx
+    class: "devicon-nginx-plain-wordmark colored"
+  - name: Docker
+    class: "devicon-docker-plain-wordmark colored"
+  - name: Travis
+    class: "devicon-travis-plain-wordmark colored"
 ---
 
 # DjangoTube
@@ -67,3 +81,7 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
 - DRF APIView에서 GET, POST, PUT, PATCH, DELETE 전의 데이터 전처리 방법
 - Nginx 와 Django를 연동해서 배포하는 방법
 - Travis를 통한 테스트 자동화
+
+## 사용 기술
+
+{% include tech.html %}

@@ -1,0 +1,7 @@
+<div class="tech">
+  {% for t in page.tech%} {% if t.image %}
+  <img src="{{t.class}}" class="tech-image" />
+  {% else %}
+  <i class="{{t.class}} tech-stack"></i>
+  {% endif %} {% endfor %}
+</div>

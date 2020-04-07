@@ -31,6 +31,15 @@ gallery:
   - url: /assets/images/portfolio/ytm/thumbar.gif
     image_path: /assets/images/portfolio/ytm/thumbar.gif
     alt: "thumbar"
+
+tech:
+  - name: HTML
+    class: "devicon-html5-plain-wordmark colored"
+  - name: Javascript
+    class: "devicon-javascript-plain colored"
+  - name: electron
+    image: true
+    class: "/assets/images/portfolio/ytm/electron_icon.png"
 ---
 
 # YouTubeMusicPlayer
@@ -53,3 +62,7 @@ gallery:
         <li>Electron을 사용한 PC용 응용 프로그램 개발</li>
     </ul>
 </p>
+
+## 사용 기술
+
+{% include tech.html %}
