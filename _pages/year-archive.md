@@ -1,7 +1,7 @@
 ---
 title: Archive
 layout: posts
-permalink: /year/
+permalink: /archive/
 entries_layout: grid
 author_profile: true
 ---

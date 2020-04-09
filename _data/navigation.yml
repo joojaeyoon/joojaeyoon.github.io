@@ -14,7 +14,7 @@ main:
     url: /categories/
 
   - title: "Archive"
-    url: /year/
+    url: /archive/
 
   # - title: "Portfolio"
   #   url: /portfolio/

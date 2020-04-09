@@ -227,15 +227,12 @@ jekyll-archives:
   enabled:
     - categories
     - tags
-    - year
   layouts:
     category: archive-taxonomy
     tag: archive-taxonomy
-    year: year-archive
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
-    year: /year/:year/
 
 # HTML Compression
 # - https://jch.penibelst.de/
