@@ -14,6 +14,8 @@ sidebar:
     image_alt: "tracker"
   - title: "Object Tracker"
 gallery:
+  - url: /assets/images/portfolio/tracking.png
+    image_path: /assets/images/portfolio/tracking.png
   - url: /assets/images/portfolio/tracking/FlowChart.png
     image_path: /assets/images/portfolio/tracking/FlowChart.png
     alt: "FlowChart"
