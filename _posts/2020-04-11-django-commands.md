@@ -4,6 +4,7 @@ excerpt: commands를 사용하여 db 연결 확인하기
 
 header:
   overlay_image: assets\images\splash\laptop2.jpg
+  overlay_filter: 0.2
   caption: Photo by Caspar Camille Rubin on [**Unsplash**](https://unsplash.com)
 
 categories:
@@ -87,6 +88,12 @@ class Command(BaseCommand):
                 time.sleep(1)
 
         self.stdout.write(self.style.SUCCESS('**Successfully connected to Database.**'))
+```
+
+`django.db.connections`를 사용해서 db 연결이 확인될 때까지 메시지를 출력하도록 한다.
+
+```
+**Database unavailable, waiting...**
 ```
 
 위와 같이 작성을 하고 `docker-compose.yml` 파일을 수정해주자.
