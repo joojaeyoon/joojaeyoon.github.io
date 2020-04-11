@@ -5,6 +5,9 @@ excerpt: commands를 사용하여 db 연결 확인하기
 header:
   overlay_image: assets\images\splash\laptop2.jpg
   caption: Photo by Caspar Camille Rubin on [**Unsplash**](https://unsplash.com)
+
+categories:
+  - Django
 ---
 
 # Docker Compose 문제
