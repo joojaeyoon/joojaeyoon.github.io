@@ -1,6 +1,6 @@
 ---
-title: Django Commands 사용하기
-excerpt: commands를 사용하여 db 연결 확인하기
+title: Django Custom Commands 추가하기
+excerpt: custom commands를 사용하여 django와 db 연결 확인하기
 
 header:
   teaser: /assets/images/teaser/django.png
@@ -97,7 +97,18 @@ class Command(BaseCommand):
 **Database unavailable, waiting...**
 ```
 
-위와 같이 작성을 하고 `docker-compose.yml` 파일을 수정해주자.
+```py
+  def add_arguments(self, parser):
+    parser.add_argument("count", type=int,help="help message ~~")
+
+  def handle(self, *args, **options):
+    count=options["count"]
+    ...
+```
+
+이런식으로 작성하면 커맨드에 인자를 받는 것도 가능하다.
+
+다음은 `docker-compose.yml` 파일을 수정해주자.
 
 ```yml
 # docker-compose.yml
