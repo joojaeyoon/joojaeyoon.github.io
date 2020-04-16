@@ -10,6 +10,10 @@ header:
 
 categories:
   - Django
+
+tags:
+  - django
+  - Google Domains
 ---
 
 # Docker Compose 문제

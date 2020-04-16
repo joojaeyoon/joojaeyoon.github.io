@@ -8,11 +8,11 @@ header:
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   overlay_filter: 0.5
 
+categories:
+  - Blog
 tags:
   - Github Pages
   - Google Domains
-categories:
-  - blog
 ---
 
 ## Goolge Domains에서 도메인 구매하기
