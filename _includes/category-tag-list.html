@@ -12,7 +12,7 @@
         class="page__taxonomy-item category-item"
         rel="tag"
     >
-        {{category | first}}
+        {{ category[0] }}
         <span class="category-count">{{category | last | size}}</span>
     </a>
     {% endfor %}
