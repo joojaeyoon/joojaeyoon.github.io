@@ -1,0 +1,37 @@
+
+<p class="page__taxonomy">
+    <strong
+    ><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{
+    site.data.ui-text[site.locale].categories_label | default: "Categories:" }}
+    </strong>
+    <p >
+    {% for category in site.categories %}
+
+    <a
+        href="/categories{{category | first | relative_url }}"
+        class="page__taxonomy-item category-item"
+        rel="tag"
+    >
+        {{category | first}}
+        <span class="category-count">{{category | last | size}}</span>
+    </a>
+    {% endfor %}
+    </p>
+</p>
+
+<p class="page__taxonomy">
+    <strong
+    ><i class="fas fa-tags" aria-hidden="true"></i> Tags:
+    </strong>
+    <br/><br/>
+    {% for tag in site.tags %}
+    <a
+        href="/tags{{tag | first | relative_url }}"
+        class="page__taxonomy-item"
+        rel="tag"
+    >
+    {{tag | first}}
+    </a>
+    <!-- {{tag[1].size}} -->
+    {% endfor %}    
+</p>
