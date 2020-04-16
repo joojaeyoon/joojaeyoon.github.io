@@ -4,7 +4,9 @@ excerpt: jekyll 블로그에 카테고리, 태그 분류하기
 
 header:
   overlay_image: /assets/images/splash/post-it.jpg
+  teaser: /assets/images/teaser/jekyll-logo-white.png
   filter: 0.3
+  caption: Photo by Marten Bjork on [**Unsplash**](https://unsplash.com)
   
 
 categories:
