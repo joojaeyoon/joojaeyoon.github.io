@@ -13,7 +13,6 @@ categories:
 
 tags:
   - django
-  - Google Domains
 ---
 
 # Docker Compose 문제
