@@ -5,9 +5,8 @@ excerpt: jekyll 블로그에 카테고리, 태그 분류하기
 header:
   overlay_image: /assets/images/splash/post-it.jpg
   teaser: /assets/images/teaser/jekyll-logo-white.png
-  filter: 0.3
+  filter: 0.5
   caption: Photo by Marten Bjork on [**Unsplash**](https://unsplash.com)
-  
 
 categories:
   - Blog
@@ -77,25 +76,19 @@ tags:
 하지만 많이 사용된 태그 순으로 정렬해서 출력하고 싶었기 때문에 먼저 태그를 정렬해서 사용하기로 했다.
 
 {% raw %}
+
 ```html
 <!-- _include/category-tag-list.html -->
 
-...
-
-{% capture tags %}
-  {% for tag in site.tags %}
-    ${{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
-  {% endfor %}
-{% endcapture %}
-
-{% assign sortedtags = tags | split:'$' | sort %}
-{% assign sortedtags = sortedtags | slice: 1, sortedtags.size %}
-
+... {% capture tags %} {% for tag in site.tags %} ${{ tag[1].size | plus: 1000
+}}#{{ tag[0] }}#{{ tag[1].size }} {% endfor %} {% endcapture %} {% assign
+sortedtags = tags | split:'$' | sort %} {% assign sortedtags = sortedtags |
+slice: 1, sortedtags.size %}
 ```
 
 각 태그의 **`tag[1].size`** 는 태그가 사용된 횟수, **`tag[0]`**는 태그명을 나타낸다.
 
-각 태그들을 **$횟수+1000#태그명#횟수** 의 형태로 만들고, **`sortedtags`**에 담아서 **`'$'`**를 기준으로 split한 뒤 정렬을 한다.
+각 태그들을 **\$횟수+1000#태그명#횟수** 의 형태로 만들고, **`sortedtags`**에 담아서 **`'$'`**를 기준으로 split한 뒤 정렬을 한다.
 
 정렬을 마친 **`sortedtags`**는 다음과 같은 형태가 된다.
 
@@ -112,22 +105,23 @@ tags:
 
 ...
 <p class="page__taxonomy">
-    <strong
-    ><i class="fas fa-tags" aria-hidden="true"></i> 
+  <strong
+    ><i class="fas fa-tags" aria-hidden="true"></i>
     Tags:
-    </strong>
-    <br/><br/>
-    {% for tag in sortedtags reversed %}
-    {% assign tagitems = tag | split: '#' %}
-    <a
-        href="/tags/{{ tagitems[1] | slugify: 'pretty' }}" 
-        class="page__taxonomy-item" 
-        rel="tag">
-        {{ tagitems[1] }}
-    </a>
-    {% endfor %}
+  </strong>
+  <br /><br />
+  {% for tag in sortedtags reversed %} {% assign tagitems = tag | split: '#' %}
+  <a
+    href="/tags/{{ tagitems[1] | slugify: 'pretty' }}"
+    class="page__taxonomy-item"
+    rel="tag"
+  >
+    {{ tagitems[1] }}
+  </a>
+  {% endfor %}
 </p>
 ```
+
 {% endraw %}
 
 # 결과
