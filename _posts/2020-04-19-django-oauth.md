@@ -1,6 +1,6 @@
 ---
-title: Django social login 추가하기
-excerpt: django app에 google, github 소셜 로그인 추가하기
+title: Django Social Login 추가하기
+excerpt: Django app에 google, github 소셜 로그인 추가하기
 
 header:
   overlay_image: /assets/images/splash/phone.jpg
