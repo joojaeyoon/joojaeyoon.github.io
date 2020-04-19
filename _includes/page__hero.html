@@ -43,6 +43,11 @@
           <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
         {% endfor %}
       {% endif %}
+      {% if page.github %}
+        <a href="{{ page.github }}" class="btn btn--light-outline btn--large">
+          <i class="fab fa-fw fa-github" aria-hidden="true"></i>
+        </a>
+      {% endif %}
 
       <!-- 글 작성 시간 표시  -->
       <p class="page__meta"><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }} <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
