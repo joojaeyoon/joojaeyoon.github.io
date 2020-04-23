@@ -43,11 +43,11 @@ tags:
 
 Django 로그인 폼에 google과 github 소셜 로그인을 추가하려고 한다.
 
-우선 [Github 개발자 페이지](https://github.com/settings/developers), [Google 개발자 콘솔](https://console.developers.google.com/) 두 곳에서 각각 **Oauth App**을 생성하고
+우선 [Github 개발자 페이지](https://github.com/settings/developers), [Google 개발자 콘솔](https://console.developers.google.com/) 두 곳에서 각각 `Oauth App`을 생성하고
 
-**Client ID**와 **Client Secret**을 얻어오자.
+`Client ID`와 `Client Secret`을 얻어오자.
 
-**Authorization callback**도 꼭 등록해주자.
+`Authorization callback`도 꼭 등록해주자.
 
 ex) http://localhost:8000/accounts/github/login/callback/
 
@@ -137,13 +137,13 @@ LOGIN_REDIRECT_URL = '/success/'
 ~# python manage.py migrate
 ```
 
-마이그레이션을 하고 Django 어드민 페이지에 가면 하단에 **SOCIAL ACCOUNTS** 탭이 생성되어 있는데,
+마이그레이션을 하고 Django 어드민 페이지에 가면 하단에 `SOCIAL ACCOUNTS` 탭이 생성되어 있는데,
 
-**SOCIAL ACCOUNTS** 탭의 **Social application**에 들어가서 google과 github application을 생성해준다.
+`SOCIAL ACCOUNTS` 탭의 `Social application`에 들어가서 google과 github application을 생성해준다.
 
 ![Django-admin](/assets/images/2020/04/django-admin.png)
 
-위에서 얻은 **Client ID**와 **Secret Key**를 입력하고 **Sites**를 추가해준다.
+위에서 얻은 `Client ID`와 `Secret Key`를 입력하고 `Sites`를 추가해준다.
 
 ![social-application](/assets/images/2020/04/social-application.png)
 
