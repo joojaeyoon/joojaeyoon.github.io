@@ -8,8 +8,6 @@ header:
   caption: Photo by Christian Wiediger on [**Unsplash**](https://unsplash.com/)
   teaser: /assets/images/teaser/django.png
 
-github: "https://github.com/joojaeyoon/DjangoTube"
-
 categories:
   - Django
 
