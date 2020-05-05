@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/splash/chat.jpg
   overlay_filter: 0.5
   caption: "Photo by Daniel Korpai on [**Unsplash**](https://unsplash.com)"
-  teaser: /assets/images/portfolio/chat.jpg
+  teaser: /assets/images/portfolio/chat/chat_main.jpg
   actions:
     - label: "Open"
       url: "http://34.230.193.35/"
@@ -80,4 +80,4 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
 
 ## 구조
 
-{% include image.html src="/assets/images/portfolio/architecture_chat.png" %}
+{% include image.html src="/assets/images/portfolio/chat/architecture_chat.png" %}

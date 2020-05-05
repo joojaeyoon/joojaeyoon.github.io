@@ -4,17 +4,17 @@ excerpt: "YOLO와 KCF 필터를 사용한 실시간 객체 추적 시스템"
 
 classes: wide
 header:
-  overlay_image: /assets/images/portfolio/tracking.png
-  teaser: /assets/images/portfolio/tracking.png
+  overlay_image: /assets\images\portfolio\tracking\tracking.png
+  teaser: /assets\images\portfolio\tracking\tracking.png
 
 github: "https://github.com/joojaeyoon/YOLO_Tracker"
 
 sidebar:
-  - image: /assets/images/portfolio/tracking.png
+  - image: /assets\images\portfolio\tracking\tracking.png
     image_alt: "tracker"
   - title: "Object Tracker"
 gallery:
-  - url: /assets/images/portfolio/tracking.png
+  - url: /assets\images\portfolio\tracking\tracking.png
     image_path: /assets/images/portfolio/tracking.png
   - url: /assets/images/portfolio/tracking/FlowChart.png
     image_path: /assets/images/portfolio/tracking/FlowChart.png

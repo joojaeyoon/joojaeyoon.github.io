@@ -88,4 +88,4 @@ _(AWS EC2 서버를 사용중입니다. AWS 북미서버 사용중이라 속도�
 
 ## 구조
 
-{% include image.html src="/assets/images/portfolio/architecture_tube.png" %}
+{% include image.html src="/assets/images/portfolio/tube/architecture_tube.png" %}

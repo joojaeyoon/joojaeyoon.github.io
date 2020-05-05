@@ -6,7 +6,7 @@ classes: wide
 header:
   overlay_image: /assets/images/splash/record.jpg
   caption: "Photo by Steve Harvey on [**Unsplash**](https://unsplash.com)"
-  teaser: /assets/images/portfolio/YTM.png
+  teaser: /assets/images/portfolio/ytm/ytm.png
   actions:
     - label: "Download"
       url: "https://github.com/joojaeyoon/YouTube-Music-Player/releases"
@@ -14,12 +14,12 @@ header:
 github: "https://github.com/joojaeyoon/YouTube-Music-Player"
 
 sidebar:
-  - image: /assets/images/portfolio/YTM.png
+  - image: /assets/images/portfolio/ytm/ytm.png
     image_alt: "ytm"
   - title: "YouTube Music Player"
     text: "Youtube Music Application for PC"
 gallery:
-  - url: /assets/images/portfolio/YTM.png
+  - url: /assets/images/portfolio/ytm/ytm.png
     image_path: /assets/images/portfolio/YTM.png
     alt: "main"
   - url: /assets/images/portfolio/ytm/loading.gif
