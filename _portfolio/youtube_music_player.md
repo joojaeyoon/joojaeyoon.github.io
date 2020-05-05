@@ -13,6 +13,7 @@ header:
 
 github: "https://github.com/joojaeyoon/YouTube-Music-Player"
 
+portpolio: true
 sidebar:
   - image: /assets/images/portfolio/ytm/ytm.png
     image_alt: "ytm"

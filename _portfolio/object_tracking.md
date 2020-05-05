@@ -32,6 +32,8 @@ gallery:
 video: "/assets/videos/yolo_tracker.mp4"
 ---
 
+# 실시간 객체 추적 시스템
+
 ## 프로젝트 소개
 
 졸업논문 **독거노인을 케어를 위한 딥 러닝 기반 실시간 객체 추적 시스템**에 사용된 프로젝트입니다.
@@ -50,7 +52,7 @@ video: "/assets/videos/yolo_tracker.mp4"
     상자를 입력하고 다음 프레임에서의 독거노인의 위치를 추적합니다.
 </p>
 
-# Object Tracker
+## Object Tracker
 
 {% include gallery %}
 {% include video.html %}

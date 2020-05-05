@@ -14,6 +14,7 @@ header:
 
 github: "https://github.com/joojaeyoon/DjangoTube"
 
+portpolio: true
 sidebar:
   - image: /assets/images/portfolio/tube/main.jpg
     image_alt: "dtube"

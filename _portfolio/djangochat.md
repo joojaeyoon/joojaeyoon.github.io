@@ -14,6 +14,7 @@ header:
 
 github: "https://github.com/joojaeyoon/djangochat"
 
+portpolio: true
 sidebar:
   - image: /assets/images/portfolio/chat/chat.jpg
     image_alt: "djangochat"
