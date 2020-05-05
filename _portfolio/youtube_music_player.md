@@ -20,7 +20,7 @@ sidebar:
     text: "Youtube Music Application for PC"
 gallery:
   - url: /assets/images/portfolio/ytm/ytm.png
-    image_path: /assets/images/portfolio/YTM.png
+    image_path: /assets/images/portfolio/ytm/ytm.png
     alt: "main"
   - url: /assets/images/portfolio/ytm/loading.gif
     image_path: /assets/images/portfolio/ytm/loading.gif
