@@ -12,6 +12,8 @@ header:
 images:
   - image_path: /assets/images/portfolio/resume.jpg
     title: Resume
+
+github: https://github.com/joojaeyoon
 ---
 
 <div>
