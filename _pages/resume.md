@@ -42,9 +42,11 @@ images:
 공부하면서 만든 개인 프로젝트들 입니다.
 
 <div class="resume-projects">
-  {% for post in site.portfolio reversed limit:6 %}
-    {% include portfolio-archive.html type="grid" %}
-  {% endfor %}
+  <div>
+    {% for post in site.portfolio reversed limit: 6 %}
+      {% include portfolio-archive.html type="grid" %}
+    {% endfor %}
+  </div>
 </div>
 
 #### 📧 jaeyoon@jooz.dev
