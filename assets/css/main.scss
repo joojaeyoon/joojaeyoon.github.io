@@ -63,3 +63,23 @@
   text-align: center;
   float: right;
 }
+
+.related_item {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+
+  height: 300px;
+
+  // padding: 5px;
+}
+
+.related_item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.related_item h2,
+p {
+  padding: 0px 5px 0px 5px;
+}
