@@ -271,7 +271,3 @@ Github도 마찬가지로 정상적으로 작동한다.
 ![github_login](/assets/images/2020/04/github_auth_login.png)
 
 ![github_login_success](/assets/images/2020/04/github_login_success.png)
-
-<a href="{{ page.github }}" class="btn btn--primary btn--x-large">
-<i class="fab fa-fw fa-github" aria-hidden="true"></i>
-</a>
