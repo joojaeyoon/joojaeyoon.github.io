@@ -330,6 +330,11 @@ body {
   &:hover {
     text-decoration: none;
     color: $link-color-hover;
+    background-color: $base04;
+
+    span {
+      background-color: $vine-color;
+    }
   }
 }
 
