@@ -1,0 +1,42 @@
+---
+---
+
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+    <a href="javascript:;" id="kakao-link-btn">
+      <img
+        src="https://t1.daumcdn.net/friends/www/talk/kakaofriends_talk_2018.png"
+      />
+    </a>
+    <div>
+        Hello World!
+    </div>
+
+    <script type="text/javascript">
+      Kakao.init("ac789a91f205cb01e863bdddbf8d3fbd");
+
+      Kakao.Link.createCustomButton({
+        container: "#kakao-link-btn",
+        templateId: 26049,
+        templateArgs: {
+          title: "Title",
+          description: "description",
+        },
+      });
+    </script>
+  </body>
+</html>
