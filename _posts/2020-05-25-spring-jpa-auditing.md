@@ -43,7 +43,7 @@ class Customer {
 
 ## Entity 생성
 
-우선 JPA Auditing을 적용하기 위해 프로젝트를 생성하고, `Post` 엔티티와 `PostRepository를` 생성해준다.
+우선 JPA Auditing을 적용하기 위해 프로젝트를 생성하고, `Post` entity와 `PostRepository`를 생성해준다.
 
 ```java
 // src/main/java/dev/jooz/springboot/domain/post/Post.java
