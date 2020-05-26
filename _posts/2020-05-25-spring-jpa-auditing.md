@@ -3,7 +3,7 @@ title: "Spring 프로젝트에 JPA Auditing 적용하기"
 excerpt: "JPA Auditing으로 created_at, updated_at 자동화하기"
 
 header:
-  teaser: /assets/images/2020/04/spring-logo.png
+  teaser: /assets/images/teaser/spring-logo.png
   overlay_image: /assets/images/splash/book.jpg
   caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
   overlay_filter: 0.5
@@ -15,7 +15,35 @@ tags:
   - jpa
 ---
 
-우선 JPA Auditing 테스트를 위해 Post 엔티티와 PostRepository를 생성해준다.
+> 책 [스프링 부트와 AWS로 혼자 구현하는 웹 서비스](http://www.yes24.com/Cooperate/Naver/welcomeNaver.aspx?pageNo=1&goodsNo=83849117)를 참고해 작성한 글 입니다.
+
+# Auditing
+
+Spring Data는 누군가 entity를 생성 또는 수정할 때 변화를 감지하고 그에 대한 시간 또는 사용자를 감지할 수 있는 기능을 제공한다.
+
+## Annotation 기반 auditing
+
+Spring Data에서 지원하는 annotation들은 어떤 사용자가 entity를 생성 또는 수정했는지 감지하는 `@CreatedBy`, `@LastModifiedBy`와 언제 생성 또는 수정되었는지 감지하는 `@CreatedDate`, `@LastModifiedDate`가 있다.
+
+```java
+// Example
+class Customer {
+
+  @CreatedBy
+  private User user;
+
+  @CreatedDate
+  private DateTime createdDate;
+
+  // … further properties omitted
+}
+```
+
+# 프로젝트 적용
+
+## Entity 생성
+
+우선 JPA Auditing을 적용하기 위해 프로젝트를 생성하고, `Post` 엔티티와 `PostRepository를` 생성해준다.
 
 ```java
 // src/main/java/dev/jooz/springboot/domain/post/Post.java
@@ -60,12 +88,12 @@ public interface PostRepository extends JpaRepository<Post,Long> {
 
 ```
 
-# Jpa Auditing
+## AuditorEntity 생성
 
-Auditing을 사용하기 위해 BaseTimeEntity를 생성해준다.
+Auditing을 사용하기 위해 AuditorEntity를 생성하고, `@CreatedDate`, `@LastModifiedDate`를 사용하여 각각 LocalDateTime 필드를 생성해준다.
 
 ```java
-// src/main/java/dev/jooz/springboot/domain/BaseTimeEntity.java
+// src/main/java/dev/jooz/springboot/domain/AuditorEntity.java
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
@@ -79,7 +107,7 @@ import java.time.LocalDateTime;
 @Getter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public abstract class BaseTimeEntity {
+public abstract class AuditorEntity {
     @CreatedDate
     private LocalDateTime createdDate;
 
@@ -88,10 +116,25 @@ public abstract class BaseTimeEntity {
 }
 ```
 
-> - `@MappedSuperClass` - JPA Entity 클래스들이 BaseTimeEntity를 상속할 경우 필드들도 칼럼으로 인식하도록 해준다.
-> - `@EntitiyListeners(AuditingEntitiyListner.class)` - BaseTimeEntity 클래스에 Auditing 기능을 포함시킨다.
-> - `@CreatedDate` - Entity가 생성되어 저장될 때 시간이 자동으로 저장된다.
-> - `@LastModifiedDate` - Entity의 값이 변경될 때 시간이 자동으로 저장된다.
+> - `@MappedSuperClass` - 부모 클래스는 테이블과 매핑하지 않고 상속받는 자식 클래스에 매핑 정보만 제공하고 싶을 때 사용한다.
+> - `@EntitiyListeners(AuditingEntitiyListner.class)` - Entity를 DB에 적용하기 이전 또는 이후에 커스텀 콜백을 요청할 수 있는 annotation.
+
+## Auditing 설정
+
+생성한 `AuditorEntity를` 상속받도록 `Post` 클래스를 수정해준다.
+
+```java
+//src/main/java/dev/jooz/springboot/domain/post/post.java
+
+...
+@Getter
+@NoArgsConstructor
+@Entity
+public class Post extends AuditorEntity{
+    ...
+}
+
+```
 
 Auditing을 사용하기 위해 Application 클래스에 `@EnableJpaAuditing` 어노테이션을 추가해준다.
 
@@ -112,9 +155,11 @@ public class Application {
 
 ```
 
-# 테스트 작성
+# 테스트
 
-Jpa Auditing 적용 확인을 위해 간단한 테스트를 작성해준다.
+## 테스트 작성
+
+Auditing 적용 확인을 위해 간단한 테스트를 작성해준다.
 
 ```java
 // src/test/java/dev/jooz/springboot/PostRepository.java
@@ -163,9 +208,13 @@ public class PostRepositoryTest {
 
 ```
 
-# 테스트 결과
+## 테스트 실행
+
+테스트를 실행시키면 문제없이 통과되는 것을 확인할 수 있다.
 
 ![result](/assets/images/2020/05/25/jpa-auditing-result.png)
+
+# Directory 구조
 
 ```
 📦SpringJPAAuditingTutorial
@@ -179,7 +228,7 @@ public class PostRepositoryTest {
  ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📂post
  ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜Post.java
  ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜PostRepository.java
- ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜BaseTimeEntity.java
+ ┃ ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜AuditorEntity.java
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜Application.java
  ┃ ┗ 📂test
  ┃ ┃ ┣ 📂java
