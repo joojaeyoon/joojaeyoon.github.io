@@ -80,10 +80,14 @@ tags:
 ```html
 <!-- _include/category-tag-list.html -->
 
-... {% capture tags %} {% for tag in site.tags %} ${{ tag[1].size | plus: 1000
-}}#{{ tag[0] }}#{{ tag[1].size }} {% endfor %} {% endcapture %} {% assign
-sortedtags = tags | split:'$' | sort %} {% assign sortedtags = sortedtags |
-slice: 1, sortedtags.size %}
+... 
+{% capture tags %} 
+    {% for tag in site.tags %} 
+        ${{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }} 
+    {% endfor %} 
+{% endcapture %} 
+{% assign sortedtags = tags | split:'$' | sort %} 
+{% assign sortedtags = sortedtags | slice: 1, sortedtags.size %}
 ```
 
 각 태그의 **`tag[1].size`** 는 태그가 사용된 횟수, **`tag[0]`**는 태그명을 나타낸다.
